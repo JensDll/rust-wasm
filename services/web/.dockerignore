@@ -1,0 +1,5 @@
+node_modules
+dist
+Dockerfile*
+wasm/*/dist
+wasm/*/target

@@ -1,0 +1,13 @@
+services:
+  web:
+    build: services/web
+    volumes:
+      - ./services/web/nginx/nginx/:/etc/nginx/
+      - ./services/web/nginx/www/config.js:/data/www/config.js
+    ports:
+      - 4000:80
+    networks:
+      - appnet
+networks:
+  appnet:
+    driver: bridge

@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "wasm-simple",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "cargo build --lib --release --target wasm32-unknown-unknown && wasm-bindgen --target web --out-dir dist target/wasm32-unknown-unknown/release/wasm_simple.wasm"
+  },
+  "sideEffects": false,
+  "module": "dist/wasm_simple.js",
+  "types": "dist/wasm_simple.d.ts"
+}

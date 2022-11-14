@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "wasm-game-of-life",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "cargo build --lib --release --target wasm32-unknown-unknown && wasm-bindgen --target web --out-dir dist target/wasm32-unknown-unknown/release/wasm_game_of_life.wasm"
+  },
+  "sideEffects": false,
+  "module": "dist/wasm_game_of_life.js",
+  "types": "dist/wasm_game_of_life.d.ts"
+}
